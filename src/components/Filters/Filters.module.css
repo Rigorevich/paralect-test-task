@@ -1,0 +1,89 @@
+.wrapper {
+  border: 1px solid #eaebed;
+  border-radius: 0.75rem;
+  background-color: #fff;
+  width: 19.6875rem;
+}
+
+.filter__content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+
+.filter__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+  gap: 67px;
+}
+
+.info__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #232134;
+}
+
+.info__clean {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #acadb9;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+}
+
+.info__close {
+  position: absolute;
+  top: 3px;
+  right: 0px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+}
+
+.info__clean:hover,
+.info__close:hover {
+  opacity: 0.7;
+}
+
+.filter__salary {
+  margin-bottom: 1.25rem;
+}
+
+.salary__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #232134;
+  margin-bottom: 0.5rem;
+}
+
+.salary__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter__button {
+  padding-top: 9.5px;
+  padding-bottom: 9.5px;
+  background: #5e96fc;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+}
+
+.filter__button:hover {
+  opacity: 0.8;
+}
+
+.filter__button:active {
+  opacity: 0.7;
+}

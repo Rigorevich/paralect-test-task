@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/Union.svg";
 import styles from "./Header.module.css";
+import Container from "../Container";
 
 import { Link, useLocation } from "react-router-dom";
 
@@ -65,10 +66,10 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.header__container}>
+      <Container className={styles.header__container}>
         <div className={styles.header__logo}>
           <img src={logo} alt="logo" />
-          <h2>Jobored</h2>
+          <Link to="/">Jobored</Link>
         </div>
         <nav className={styles.header__menu}>
           <ul className={styles.menu__list}>
@@ -98,7 +99,7 @@ function Header() {
             </li>
           </ul>
         </nav>
-      </div>
+      </Container>
     </header>
   );
 }

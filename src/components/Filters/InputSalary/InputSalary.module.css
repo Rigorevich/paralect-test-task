@@ -1,0 +1,56 @@
+.salary__input {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #d5d6dc;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+}
+
+.salary__input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #acadb9;
+}
+
+.salary__input input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #acadb9;
+}
+
+.salary__input input::-webkit-outer-spin-button,
+.salary__input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input__arrows {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+
+  z-index: 50;
+  top: 5px;
+  right: 11px;
+}
+
+.input__arrows img {
+  width: 0.75rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+}
+
+.input__arrows img:hover {
+  opacity: 0.6;
+}
+
+.input__arrows :last-child {
+  transform: rotate(180deg);
+}

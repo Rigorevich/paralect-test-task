@@ -1,11 +1,6 @@
 .header {
   background-color: #fff;
-}
-
-.header__container {
-  max-width: 1116px;
-  min-height: 5.25rem;
-  margin: 0 auto;
+  margin-bottom: 2.5rem;
 }
 
 .header__container {
@@ -25,7 +20,7 @@
   width: 1.875rem;
 }
 
-.header__logo h2 {
+.header__logo a {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
