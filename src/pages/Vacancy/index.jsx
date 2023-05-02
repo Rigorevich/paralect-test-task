@@ -23,7 +23,7 @@ function Vacancy() {
         <Loader size="xl" style={{ margin: "auto" }} />
       ) : (
         <>
-          <BoardItem vacancy={vacancy} style />
+          <BoardItem vacancy={vacancy} styleProp />
           <Description vacancy={vacancy} />
         </>
       )}

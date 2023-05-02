@@ -42,7 +42,7 @@ function JobBoard({ vacancies, loading, total, page, error }) {
               />
             </>
           ) : (
-            <EmptyState style={true} />
+            <EmptyState styleProp />
           )}
         </>
       )}

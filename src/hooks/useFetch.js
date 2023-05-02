@@ -27,7 +27,7 @@ export function useFetch(url) {
     }
 
     fetchData();
-  }, [url, options]);
+  }, [url]);
 
   return [response, isLoading, error];
 }

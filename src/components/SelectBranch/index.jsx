@@ -21,7 +21,7 @@ function SelectBranch({
     if (catalogsStatus) return;
     const item = catalogs.find((item) => item.title_rus === selectedValue);
     dispatch(setFilters({ catalogues: item }));
-  }, [selectedValue]);
+  }, [selectedValue, catalogs, dispatch, catalogsStatus]);
 
   const handleSelectChange = (catalog) => {
     setSelectedValue(catalog);
@@ -62,7 +62,7 @@ function SelectBranch({
           },
         }}
         placeholder="Выберете отрасль"
-        rightSection={<img src={lg_arrow} />}
+        rightSection={<img src={lg_arrow} alt="arrow" />}
         data={data}
       />
     </div>

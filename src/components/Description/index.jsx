@@ -9,7 +9,7 @@ function Description({ vacancy }) {
     const doc = parser.parseFromString(vacancy.vacancyRichText, "text/html");
     const body = doc.querySelector("body").innerHTML;
     setHtml(body);
-  }, []);
+  }, [vacancy.vacancyRichText]);
 
   return (
     <div className={styles.board__item}>

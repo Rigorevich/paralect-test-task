@@ -17,7 +17,7 @@ function Home() {
 
   useEffect(() => {
     dispatch(fetchVacancies());
-  }, [page, count]);
+  }, [page, count, dispatch]);
 
   const params = {
     vacancies,
