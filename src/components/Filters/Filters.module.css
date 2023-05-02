@@ -2,7 +2,7 @@
   border: 1px solid #eaebed;
   border-radius: 0.75rem;
   background-color: #fff;
-  width: 19.6875rem;
+  min-width: 19.6875rem;
 }
 
 .filter__content {
@@ -35,7 +35,7 @@
   transition: opacity 0.2s ease-in;
 }
 
-.info__close {
+.info__clean img {
   position: absolute;
   top: 3px;
   right: 0px;
@@ -43,8 +43,7 @@
   transition: opacity 0.2s ease-in;
 }
 
-.info__clean:hover,
-.info__close:hover {
+.info__clean:hover {
   opacity: 0.7;
 }
 
@@ -86,4 +85,31 @@
 
 .filter__button:active {
   opacity: 0.7;
+}
+
+@media (max-width: 899.98px) {
+  .wrapper {
+    min-width: 100%;
+  }
+  .filter__content {
+    padding: 40px;
+  }
+
+  .filter__info {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .info__clean span {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 399.98px) {
+  .filter__content {
+    padding: 1.5rem;
+  }
+  .info__clean span {
+    display: none;
+  }
 }

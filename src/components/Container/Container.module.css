@@ -2,6 +2,13 @@
   max-width: 1116px;
   min-height: 5.25rem;
   margin: 0 auto;
-  /* padding-right: 10.125rem;
-  padding-left: 10.125rem; */
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+@media (max-width: 899.98px) {
+  .container {
+    padding-right: 1.5625rem;
+    padding-left: 1.5625rem;
+  }
 }
