@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./Favorites.module.css";
 
-import Container from "@components/Container";
-import EmptyState from "@components/EmptyState";
-import BoardList from "@components/BoardList";
-import usePagination from "@hooks/usePagination";
+import Container from "../../components/Container";
+import EmptyState from "../../components/EmptyState";
+import BoardList from "../../components/BoardList";
+import usePagination from "../../hooks/usePagination";
 
 import { Pagination } from "@mantine/core";
 

@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "@images/Union.svg";
+import logo from "../../assets/images/Union.svg";
 import styles from "./Header.module.css";
-import Container from "@components/Container";
+import Container from "../Container";
 
 import { Link, useLocation } from "react-router-dom";
 

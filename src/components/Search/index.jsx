@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import search from "@images/search.svg";
+import search from "../../assets/images/search.svg";
 import styles from "./Search.module.css";
 
 import { useDispatch } from "react-redux";
-import { setFilters, fetchVacancies } from "@store/slices/vacanciesSlice";
+import { setFilters, fetchVacancies } from "../../store/slices/vacanciesSlice";
 
 function Search() {
   const [searchInput, setSearchInput] = useState("");

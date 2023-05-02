@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import Container from "@components/Container";
-import Filters from "@components/Filters";
-import JobBoard from "@components/JobBoard";
+import Container from "../../components/Container";
+import Filters from "../../components/Filters";
+import JobBoard from "../../components/JobBoard";
 import styles from "./Home.module.css";
 
 import { useDispatch, useSelector } from "react-redux";
-import { fetchVacancies } from "@store/slices/vacanciesSlice";
+import { fetchVacancies } from "../../store/slices/vacanciesSlice";
 
 function Home() {
   const { vacancies, loading, error, total } = useSelector(

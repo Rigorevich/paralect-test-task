@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import styles from "./BoardItem.module.css";
-import marker from "@images/marker.svg";
-import star from "@images/star.svg";
-import savedStar from "@images/savedStar.svg";
-
+import marker from "../../assets/images/marker.svg";
+import star from "../../assets/images/star.svg";
+import savedStar from "../../assets/images/savedStar.svg";
 import { useNavigate } from "react-router-dom";
 
 function BoardItem({ vacancy, style = false }) {

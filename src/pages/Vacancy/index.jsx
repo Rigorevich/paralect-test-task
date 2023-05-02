@@ -2,11 +2,12 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Vacancy.module.css";
 
-import { useFetch } from "@hooks/useFetch";
-import { VACANCIES_URL } from "@constants";
+import { useFetch } from "../../hooks/useFetch";
+import { VACANCIES_URL } from "../../constants";
+import BoardItem from "../../components/BoardItem";
+import Description from "../../components/Description";
+
 import { Loader } from "@mantine/core";
-import BoardItem from "@components/BoardItem";
-import Description from "@components/Description";
 
 function Vacancy() {
   const { id } = useParams();

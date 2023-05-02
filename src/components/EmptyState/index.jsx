@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./EmptyState.module.css";
-import img from "@images/Frame.png";
+import img from "../../assets/images/Frame.png";
 import { useNavigate } from "react-router-dom";
 
 function EmptyState({ style = false }) {

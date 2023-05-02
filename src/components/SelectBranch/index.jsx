@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import styles from "./SelectBranch.module.css";
-import lg_arrow from "@images/lg_arrow.svg";
+import lg_arrow from "../../assets/images/lg_arrow.svg";
 
 import { Select } from "@mantine/core";
 import { useDispatch } from "react-redux";
-import { setFilters } from "@store/slices/vacanciesSlice";
+import { setFilters } from "../../store/slices/vacanciesSlice";
 
 function SelectBranch({
   selectedValue,

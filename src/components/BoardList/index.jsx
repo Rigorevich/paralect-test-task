@@ -1,5 +1,5 @@
 import React from "react";
-import BoardItem from "@components/BoardItem";
+import BoardItem from "../BoardItem";
 import styles from "./BoardList.module.css";
 
 function BoardList({ vacancies }) {

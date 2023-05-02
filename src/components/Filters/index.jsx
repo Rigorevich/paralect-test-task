@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import styles from "./Filters.module.css";
-import cross from "@images/cross.svg";
-import arrowsSvg from "@images/arrows.svg";
+import cross from "../../assets/images/cross.svg";
+import arrowsSvg from "../../assets/images/arrows.svg";
 
-import SelectBranch from "@components/SelectBranch";
+import SelectBranch from "../SelectBranch";
 
 import { Input } from "@mantine/core";
-import { CATALOG_URL } from "@constants";
-import { useFetch } from "@hooks/useFetch";
+import { CATALOG_URL } from "../../constants";
+import { useFetch } from "../../hooks/useFetch";
 import { useDispatch } from "react-redux";
 import {
   fetchVacancies,
   setDefaultFilters,
   setFilters,
-} from "@store/slices/vacanciesSlice";
+} from "../../store/slices/vacanciesSlice";
 
 function Filters() {
   const [catalogs, catalogsStatus, catalogsError] = useFetch(CATALOG_URL);

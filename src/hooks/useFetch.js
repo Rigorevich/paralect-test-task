@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { options } from "@constants";
+import { options } from "../constants";
 
 export function useFetch(url) {
   const [isLoading, setLoading] = useState(true);

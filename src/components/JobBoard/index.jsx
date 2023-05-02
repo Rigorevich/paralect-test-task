@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./JobBoard.module.css";
 
-import Search from "@components/Search";
-import BoardList from "@components/BoardList";
-import EmptyState from "@components/EmptyState";
+import Search from "../Search";
+import BoardList from "../BoardList";
+import EmptyState from "../EmptyState";
 
 import { Loader, Pagination } from "@mantine/core";
 import { useDispatch } from "react-redux";
-import { setFilters } from "@store/slices/vacanciesSlice";
+import { setFilters } from "../../store/slices/vacanciesSlice";
 
 function JobBoard({ vacancies, loading, total, page, error }) {
   const dispatch = useDispatch();
