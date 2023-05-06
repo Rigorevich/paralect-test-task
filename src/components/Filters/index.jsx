@@ -7,6 +7,7 @@ import SelectBranch from "../SelectBranch";
 
 import { Input } from "@mantine/core";
 import { CATALOG_URL } from "../../constants";
+import { useForm } from "react-hook-form";
 import { useFetch } from "../../hooks/useFetch";
 import { useDispatch } from "react-redux";
 import {
@@ -20,10 +21,11 @@ function Filters() {
   const [payment_from, setPaymentFrom] = useState("");
   const [payment_to, setPaymentTo] = useState("");
   const [selectedValue, setSelectedValue] = useState("");
+  const { register, handleSubmit } = useForm();
 
   const dispatch = useDispatch();
 
-  const handleClickApply = () => {
+  const onSubmit = () => {
     dispatch(setFilters({ page: 1, payment_from, payment_to }));
     dispatch(fetchVacancies());
   };
@@ -35,21 +37,12 @@ function Filters() {
     dispatch(setDefaultFilters());
   };
 
-  const handleBlurFrom = () => {
-    if (payment_from.trim() === "" || Number.isNaN(Number(payment_from))) {
-      setPaymentFrom("");
-    }
-  };
-
-  const handleBlurTo = () => {
-    if (payment_to.trim() === "" || Number.isNaN(Number(payment_to))) {
-      setPaymentTo("");
-    }
-  };
-
   return (
     <div className={styles.wrapper}>
-      <div className={styles.filter__content}>
+      <form
+        className={styles.filter__content}
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className={styles.filter__info}>
           <h3 className={styles.info__title}>Фильтры</h3>
           <div className={styles.info__clean} onClick={handleClickClean}>
@@ -89,9 +82,9 @@ function Filters() {
                   },
                 },
               }}
+              {...register("payment_from")}
               value={payment_from}
               onChange={(e) => setPaymentFrom(e.target.value)}
-              onBlur={handleBlurFrom}
             />
             <Input
               data-elem="salary-to-input"
@@ -115,32 +108,16 @@ function Filters() {
                   },
                 },
               }}
+              {...register("payment_to")}
               value={payment_to}
               onChange={(e) => setPaymentTo(e.target.value)}
-              onBlur={handleBlurTo}
             />
-            {/* <InputSalary
-              placeholder="От"
-              data_elem="salary-from-input"
-              value={payment_from}
-              onChangeInput={handlePaymentFrom}
-            />
-            <InputSalary
-              placeholder="До"
-              data_elem="salary-to-input"
-              value={payment_to}
-              onChangeInput={handlePaymentTo}
-            /> */}
           </div>
         </div>
-        <button
-          data-elem="search-button"
-          className={styles.filter__button}
-          onClick={handleClickApply}
-        >
+        <button data-elem="search-button" className={styles.filter__button}>
           Применить
         </button>
-      </div>
+      </form>
     </div>
   );
 }

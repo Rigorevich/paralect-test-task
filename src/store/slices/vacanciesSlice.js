@@ -12,12 +12,12 @@ export const fetchVacancies = createAsyncThunk(
       no_agreement: 1,
     };
 
-    if (state.filters.payment_from && state.filters.payment_from >= 0) {
-      params.payment_from = Number(state.filters.payment_from);
+    if (state.filters.payment_from) {
+      params.payment_from = state.filters.payment_from;
     }
 
-    if (state.filters.payment_to && state.filters.payment_to >= 0) {
-      params.payment_to = Number(state.filters.payment_to);
+    if (state.filters.payment_to) {
+      params.payment_to = state.filters.payment_to;
     }
     if (state.filters.keyword) {
       params.keyword = state.filters.keyword;
